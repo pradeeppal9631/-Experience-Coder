@@ -1,0 +1,29 @@
+const NFTs=[]
+function mintNFT(_name,_color,_jeanstype,_car){
+  const NFT={
+    "name":_name,
+    "color":_color,
+    "jeanstype":_jeanstype,
+    "car": _car
+  }
+  
+  NFTs.push(NFT);
+  console.log("minted:" + _name);
+}
+
+function listNFTs(){
+  for(let i=0;i<NFTs.length;i++){
+    console.log( "Name:"+ NFTs[i].name);
+    console.log( "Color:" + NFTs[i].color);
+    console.log( "Jeanstype:" + NFTs[i].jeanstype);
+    console.log( "Car :" +NFTs[i].car);
+  }
+}
+
+function getTotalSupply(){
+  console.log( NFTs.length);
+}
+
+mintNFT("bob", "black", "Dennim", "BMW");
+listNFTs();
+getTotalSupply();
